@@ -1,0 +1,379 @@
+/*null styles*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+nav li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat Italic 400.woff2") format("woff2"), url("../fonts/Montserrat Italic 400.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat Medium 500.woff2") format("woff2"), url("../fonts/Montserrat Medium 500.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat Medium Italic 500.woff2") format("woff2"), url("../fonts/Montserrat Medium Italic 500.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url("../fonts/Montserrat Regular 400.woff2") format("woff2"), url("../fonts/Montserrat Regular 400.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: MontserratAlternates;
+  font-display: swap;
+  src: url("../fonts/MontserratAlternates-Medium.woff2") format("woff2"), url("../fonts/MontserratAlternates-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+body {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 14px;
+}
+body._lock {
+  overflow: hidden;
+}
+
+._container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0px 15px;
+  box-sizing: content-box;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+._ibg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+._ibg img {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: 100;
+}
+.header__inner-gradient {
+  position: relative;
+}
+.header__inner-gradient::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 139%;
+  background: linear-gradient(180deg, rgba(31, 27, 32, 0.91) 0%, rgba(31, 27, 32, 0) 100%);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 34px 0px;
+}
+@media screen and (max-width: 1024px) {
+  .header__inner {
+    padding: 20px 0px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__inner {
+    padding: 14px 0px;
+  }
+}
+.header__about {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+.header__logo {
+  display: inline-block;
+  max-width: 150px;
+  margin-right: 28px;
+}
+.header__logo img {
+  width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .header__logo {
+    max-width: 110px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__logo {
+    margin-right: 20px;
+    max-width: 90px;
+  }
+}
+.header__text {
+  line-height: 153%;
+  letter-spacing: 0.015em;
+  color: #cfcfcf;
+}
+@media screen and (max-width: 1024px) {
+  .header__text {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header__text {
+    margin-bottom: 40px;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+.header__info {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .header__info {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    transition: top 1s ease 0s;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .header__info._active {
+    top: 0;
+  }
+}
+.header__burger {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .header__burger {
+    z-index: 5;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+  }
+  .header__burger span, .header__burger::before, .header__burger::after {
+    left: 0;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    transition: all 0.3s ease 0s;
+    background-color: #ffffff;
+  }
+  .header__burger::before, .header__burger::after {
+    content: "";
+  }
+  .header__burger::before {
+    top: 0;
+  }
+  .header__burger::after {
+    bottom: 0;
+  }
+  .header__burger span {
+    top: 50%;
+    transform: scale(1) translate(0px, -50%);
+  }
+}
+.header__burger._active span {
+  transform: scale(0) translate(0px, -50%);
+  background-color: #42af6c;
+}
+.header__burger._active::before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0px, -50%);
+  background-color: #42af6c;
+}
+.header__burger._active::after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(0px, 50%);
+  background-color: #42af6c;
+}
+.header__phone {
+  margin-right: 46px;
+}
+@media screen and (max-width: 1024px) {
+  .header__phone {
+    margin-right: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__phone {
+    margin-right: 0px;
+    margin-bottom: 40px;
+  }
+}
+.header__phone-value {
+  padding: 10px;
+  font-size: 16px;
+  line-height: 125%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #cfcfcf;
+  transition: color 0.3s ease 0s;
+}
+.header__phone-value:hover {
+  color: #42af6c;
+}
+@media screen and (max-width: 1024px) {
+  .header__phone-value {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header__phone-value {
+    font-size: 18px;
+  }
+}
+.header__social {
+  display: flex;
+  align-items: center;
+  margin: 0px -8px;
+}
+.header__social-link {
+  padding: 10px;
+  box-sizing: content-box;
+  max-width: 30px;
+  margin: 0px 8px;
+}
+.header__social-link path {
+  transition: fill 0.3s ease 0s;
+}
+.header__social-link:hover .telegram-icon,
+.header__social-link:hover .youtube-icon {
+  fill: #42af6c;
+}
+.header__social-link:hover .whatsapp-icon,
+.header__social-link:hover .vk-icon {
+  fill: #42af6c;
+  stroke: #42af6c;
+}

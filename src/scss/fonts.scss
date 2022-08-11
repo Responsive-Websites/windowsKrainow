@@ -1,7 +1,40 @@
 @font-face {
-	font-family: example;
-	font-display: swap;
-	src: url("../fonts/example.woff2") format("woff2"), url("../fonts/example.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
+  font-family: Montserrat;
+  font-display: swap;
+  src: url('../fonts/Montserrat Italic 400.woff2') format('woff2'),
+    url('../fonts/Montserrat Italic 400.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url('../fonts/Montserrat Medium 500.woff2') format('woff2'),
+    url('../fonts/Montserrat Medium 500.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url('../fonts/Montserrat Medium Italic 500.woff2') format('woff2'),
+    url('../fonts/Montserrat Medium Italic 500.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: Montserrat;
+  font-display: swap;
+  src: url('../fonts/Montserrat Regular 400.woff2') format('woff2'),
+    url('../fonts/Montserrat Regular 400.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: MontserratAlternates;
+  font-display: swap;
+  src: url('../fonts/MontserratAlternates-Medium.woff2') format('woff2'),
+    url('../fonts/MontserratAlternates-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
 }

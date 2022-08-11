@@ -1,1 +1,215 @@
 //header
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: 100;
+  &__inner-gradient {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 139%;
+      background: linear-gradient(
+        180deg,
+        rgba(31, 27, 32, 0.91) 0%,
+        rgba(31, 27, 32, 0) 100%
+      );
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+  &__container {
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 34px 0px;
+    @media screen and (max-width: $md-4) {
+      padding: 20px 0px;
+    }
+    @media screen and (max-width: $md-3) {
+      padding: 14px 0px;
+    }
+  }
+
+  &__about {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    display: inline-block;
+    max-width: 150px;
+    margin-right: 28px;
+    & img {
+      width: 100%;
+    }
+
+    @media screen and (max-width: $md-4) {
+      max-width: 110px;
+    }
+    @media screen and (max-width: $md-3) {
+      margin-right: 20px;
+      max-width: 90px;
+    }
+  }
+
+  &__text {
+    line-height: 153%;
+
+    letter-spacing: 0.015em;
+
+    color: $color-grey;
+
+    @media screen and (max-width: $md-4) {
+      font-size: 12px;
+    }
+    @media screen and (max-width: $md-2) {
+      margin-bottom: 40px;
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: $md-3) {
+      position: fixed;
+      top: -100%;
+      left: 0;
+      background-color: black;
+      width: 100%;
+      height: 100%;
+      transition: top 1s ease 0s;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: center;
+      &._active {
+        top: 0;
+      }
+    }
+  }
+  &__burger {
+    display: none;
+    @media screen and (max-width: $md-3) {
+      z-index: 5;
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+
+      & span,
+      &::before,
+      &::after {
+        left: 0;
+        position: absolute;
+        height: 10%;
+        width: 100%;
+        transition: all 0.3s ease 0s;
+        background-color: #ffffff;
+      }
+      &::before,
+      &::after {
+        content: '';
+      }
+      &::before {
+        top: 0;
+      }
+      &::after {
+        bottom: 0;
+      }
+      & span {
+        top: 50%;
+        transform: scale(1) translate(0px, -50%);
+      }
+    }
+    &._active span {
+      transform: scale(0) translate(0px, -50%);
+
+      background-color: $color-green;
+    }
+    &._active::before {
+      top: 50%;
+      transform: rotate(-45deg) translate(0px, -50%);
+      background-color: $color-green;
+    }
+    &._active::after {
+      bottom: 50%;
+      transform: rotate(45deg) translate(0px, 50%);
+      background-color: $color-green;
+    }
+  }
+
+  &__phone {
+    margin-right: 46px;
+    @media screen and (max-width: $md-4) {
+      margin-right: 30px;
+    }
+    @media screen and (max-width: $md-3) {
+      margin-right: 0px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__phone-value {
+    padding: 10px;
+    font-size: 16px;
+    line-height: 125%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: $color-grey;
+
+    transition: color 0.3s ease 0s;
+
+    &:hover {
+      color: $color-green;
+    }
+
+    @media screen and (max-width: $md-4) {
+      font-size: 14px;
+    }
+    @media screen and (max-width: $md-3) {
+      font-size: 18px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    margin: 0px -8px;
+  }
+
+  &__social-link {
+    padding: 10px;
+    box-sizing: content-box;
+    max-width: 30px;
+    margin: 0px 8px;
+    & path {
+      transition: fill 0.3s ease 0s;
+    }
+
+    &:hover {
+      .telegram-icon,
+      .youtube-icon {
+        fill: $color-green;
+      }
+      .whatsapp-icon,
+      .vk-icon {
+        fill: $color-green;
+        stroke: $color-green;
+      }
+    }
+  }
+}
