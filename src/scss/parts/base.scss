@@ -5,6 +5,7 @@ body {
   font-family: Montserrat;
   font-weight: 400;
   font-size: 14px;
+  color: $color-balck-font;
   &._lock {
     overflow: hidden;
   }
@@ -21,10 +22,6 @@ body {
 
 .wrapper {
   min-height: 100%;
-  overflow: hidden;
-
-  display: flex;
-  flex-direction: column;
 }
 main {
   flex: 1 1 auto;

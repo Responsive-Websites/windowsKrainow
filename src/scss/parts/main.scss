@@ -1,1 +1,149 @@
 //main
+.main {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  &__preview-screen {
+    flex: 1 0 100%;
+    position: relative;
+  }
+}
+.preview-screen {
+  &__content {
+    position: relative;
+    top: 50%;
+    left: 0;
+    z-index: 2;
+    transform: translate(0px, -50%);
+  }
+  &__container {
+  }
+
+  &__inner {
+  }
+
+  &__heading {
+    font-family: MontserratAlternates;
+    font-weight: 500;
+    font-size: 54px;
+    line-height: 111%;
+    margin-bottom: 12px;
+    max-width: 910px;
+    color: $color-white;
+  }
+
+  &__text {
+    max-width: 440px;
+    font-size: 20px;
+    line-height: 240%;
+    color: $color-grey;
+    letter-spacing: 0.02em;
+    margin-bottom: 28px;
+  }
+
+  &__form {
+    max-width: 460px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  &__call {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+
+  &__input {
+    flex: 1 1 100%;
+    padding: 12px 30px;
+
+    background: rgba(31, 27, 32, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.78);
+    border-right: none;
+    min-height: 52px;
+  }
+
+  &__button {
+    flex: 1 0 auto;
+    min-height: 52px;
+    padding: 16px 30px;
+    font-weight: 500;
+    line-height: 150%;
+    color: $color-white;
+    letter-spacing: 0.015em;
+    border-radius: 0px 3px 3px 0px;
+    background-color: $color-green;
+    text-transform: uppercase;
+
+    transition: background-color 0.3s ease 0s;
+
+    @media screen and (min-width: $md-2) {
+      &:hover {
+        background-color: $color-green-sub;
+      }
+      &:active {
+        background-color: $color-balck-font;
+      }
+    }
+  }
+
+  &__data {
+    display: flex;
+    align-items: center;
+  }
+
+  &__checkbox {
+    margin-right: 12px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  &__data-label {
+    font-size: 13px;
+    line-height: 150%;
+
+    letter-spacing: 0.015em;
+
+    color: #a6a6a6;
+    cursor: pointer;
+
+    & a {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+
+  &__video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    background-color: rgba(6, 94, 32, 0.329);
+    & video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      filter: brightness(60%);
+    }
+  }
+}

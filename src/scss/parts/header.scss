@@ -174,7 +174,9 @@
     transition: color 0.3s ease 0s;
 
     &:hover {
-      color: $color-green;
+      @media screen and (min-width: $md-2) {
+        color: $color-green;
+      }
     }
 
     @media screen and (max-width: $md-4) {
@@ -201,14 +203,16 @@
     }
 
     &:hover {
-      .telegram-icon,
-      .youtube-icon {
-        fill: $color-green;
-      }
-      .whatsapp-icon,
-      .vk-icon {
-        fill: $color-green;
-        stroke: $color-green;
+      @media screen and (min-width: $md-2) {
+        .telegram-icon,
+        .youtube-icon {
+          fill: $color-green;
+        }
+        .whatsapp-icon,
+        .vk-icon {
+          fill: $color-green;
+          stroke: $color-green;
+        }
       }
     }
   }
