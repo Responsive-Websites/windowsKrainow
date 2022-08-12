@@ -22,18 +22,19 @@ burger_icon.addEventListener('click', function (e) {
 
 // =========================================================
 
-// ibg
+ibg;
 
-// function ibg() {
-//     let ibg = document.querySelectorAll('._ibg');
-//     for (var i = 0; i < ibg.length; i++) {
-//       if (ibg[i].querySelector('img')) {
-//         ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
-//       }
-//     }
-//   }
+function ibg() {
+  let ibg = document.querySelectorAll('._ibg');
+  for (var i = 0; i < ibg.length; i++) {
+    if (ibg[i].querySelector('img')) {
+      ibg[i].style.backgroundImage =
+        'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
+    }
+  }
+}
 
-//   ibg();
+ibg();
 
 // =========================================================
 
@@ -608,3 +609,65 @@ da.init();
 //     animOnScroll();
 //   }, 1000);
 // }
+
+//slider things
+const pageSlider = new Swiper('.main', {
+  wrapperClass: 'main__wrapper',
+  slideClass: 'screen',
+
+  direction: 'vertical',
+  slidesPerView: 'auto',
+  parallax: true,
+
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true,
+  },
+  mousewheel: {
+    sensitivity: 1,
+  },
+
+  watchOverflow: true,
+
+  speed: 1800,
+  observer: true,
+  observeParents: true,
+  observeSlideChildren: true,
+});
+
+const benefitsSlider = new Swiper('.benefits__slider', {
+  speed: 1800,
+
+  autoplay: {
+    delay: 7000,
+  },
+
+  navigation: {
+    nextEl: '.benefits__next',
+    prevEl: '.benefits__prev',
+  },
+  breakpoints: {
+    320: {
+      spaceBetween: 10,
+      slidesPerView: '1',
+    },
+
+    480: {
+      spaceBetween: 10,
+      slidesPerView: '2',
+    },
+    768: {
+      spaceBetween: 10,
+      slidesPerView: '3',
+    },
+    1024: {
+      spaceBetween: 16,
+      slidesPerView: '4',
+    },
+    1200: {
+      spaceBetween: 30,
+      slidesPerView: '4',
+    },
+  },
+});
