@@ -25,11 +25,18 @@
     left: 0;
     z-index: 2;
     transform: translate(0px, -50%);
+
+    @media screen and (max-height: 680px) {
+      top: calc(50% + 44px);
+    }
   }
   &__container {
   }
 
   &__inner {
+    @media (max-width: $md-3), (max-height: 500px) {
+      text-align: center;
+    }
   }
 
   &__heading {
@@ -40,6 +47,21 @@
     margin-bottom: 12px;
     max-width: 910px;
     color: $color-white;
+
+    @media (max-width: $md-4), (max-height: 680px) {
+      font-size: 36px;
+      max-width: 700px;
+      margin-bottom: 4px;
+    }
+    @media (max-width: $md-3), (max-height: 500px) {
+      font-size: 28px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    @media (max-width: $md-2) {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
   }
 
   &__text {
@@ -49,6 +71,19 @@
     color: $color-grey;
     letter-spacing: 0.02em;
     margin-bottom: 28px;
+
+    @media (max-width: $md-4), (max-height: 680px) {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    @media (max-width: $md-3), (max-height: 500px) {
+      font-size: 16px;
+      margin: 0 auto;
+      margin-bottom: 16px;
+    }
+    @media (max-width: $md-2) {
+      font-size: 14px;
+    }
   }
 
   &__form {
@@ -56,6 +91,9 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    @media (max-width: $md-3), (max-height: 500px) {
+      margin: 0 auto;
+    }
   }
 
   &__call {
@@ -63,28 +101,48 @@
     display: flex;
     align-items: center;
     width: 100%;
-    justify-content: center;
+    @media (max-width: $md-4), (max-height: 680px) {
+      margin-bottom: 14px;
+    }
+    @media (max-width: $md-2) {
+      flex-flow: column nowrap;
+      margin-bottom: 20px;
+    }
   }
 
   &__input {
-    flex: 1 1 100%;
     padding: 12px 30px;
-
+    flex: 1 1 252px;
     background: rgba(31, 27, 32, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.78);
     border-right: none;
     min-height: 52px;
+    min-width: 0px;
+    font-size: 17px;
+    line-height: 150%;
+
+    letter-spacing: 0.155em;
+    color: $color-white;
+    @media (max-width: $md-2) {
+      flex: 0 1 auto;
+      width: 100%;
+      max-width: 360px;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.78);
+      margin-bottom: 4px;
+      text-align: center;
+    }
   }
 
   &__button {
-    flex: 1 0 auto;
+    flex: 1 0 210px;
     min-height: 52px;
     padding: 16px 30px;
     font-weight: 500;
     line-height: 150%;
     color: $color-white;
     letter-spacing: 0.015em;
-    border-radius: 0px 3px 3px 0px;
+    border-radius: 0px 4px 4px 0px;
     background-color: $color-green;
     text-transform: uppercase;
 
@@ -98,6 +156,13 @@
         background-color: $color-balck-font;
       }
     }
+
+    @media (max-width: $md-2) {
+      flex: 1 0 auto;
+      width: 100%;
+      max-width: 360px;
+      border-radius: 4px;
+    }
   }
 
   &__data {
@@ -109,7 +174,35 @@
     margin-right: 12px;
     width: 20px;
     height: 20px;
-    cursor: pointer;
+
+    opacity: 0;
+
+    & + .preview-screen__data-inner label {
+      user-select: none;
+    }
+    & + .preview-screen__data-inner label::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -32px;
+      width: 20px;
+      height: 20px;
+
+      border: 1px solid #a6a6a6;
+      border-radius: 2px;
+
+      @media (max-width: 420px) {
+        top: 40%;
+      }
+    }
+    &:checked + .preview-screen__data-inner label::before {
+      background: url('../../img/icons/ok-icon.svg') center no-repeat;
+    }
+    &:not(:disabled):not(:checked)
+      + .preview-screen__data-inner
+      label:hover::before {
+      border: 1px solid #42af6c;
+    }
   }
 
   &__data-label {
@@ -120,11 +213,21 @@
 
     color: #a6a6a6;
     cursor: pointer;
+    margin-right: 6px;
+    position: relative;
+  }
+  &__data-inner {
+    display: flex;
+    align-items: center;
 
-    & a {
-      color: inherit;
-      text-decoration: underline;
+    @media (max-width: 420px) {
+      flex-flow: column nowrap;
+      align-items: flex-start;
     }
+  }
+  &__data-link {
+    color: #a6a6a6;
+    text-decoration: underline;
   }
 
   &__video {
@@ -143,7 +246,7 @@
       top: 0;
       left: 0;
       object-fit: cover;
-      filter: brightness(60%);
+      filter: brightness(50%);
     }
   }
 }

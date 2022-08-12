@@ -14,7 +14,7 @@
             <form action="#" class="preview-screen__form">
               <div class="preview-screen__call">
                 <input type="text" class="preview-screen__input" />
-                <button type="send" class="preview-screen__button">
+                <button type="submit" class="preview-screen__button">
                   Заказать звонок
                 </button>
               </div>
@@ -25,10 +25,14 @@
                   class="preview-screen__checkbox"
                   checked
                 />
-                <label for="checkbox-data" class="preview-screen__data-label"
-                  >Я согласен на
-                  <a href="#">обработку персональных данных</a></label
-                >
+                <div class="preview-screen__data-inner">
+                  <label for="checkbox-data" class="preview-screen__data-label"
+                    >Я согласен на
+                  </label>
+                  <a href="#" class="preview-screen__data-link"
+                    >обработку персональных данных</a
+                  >
+                </div>
               </div>
             </form>
           </div>

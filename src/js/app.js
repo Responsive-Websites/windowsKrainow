@@ -3,6 +3,14 @@
 
 // 'use strict';
 
+//mask phone number
+let phone_number = document.querySelector('.preview-screen__input');
+let maskOptions = {
+  mask: '+{7}(000)000 0000',
+  lazy: false,
+};
+let mask = IMask(phone_number, maskOptions);
+
 // burger
 
 let header_menu = document.querySelector('.header__info');
