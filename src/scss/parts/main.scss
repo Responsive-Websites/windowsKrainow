@@ -24,6 +24,10 @@
   }
   &__questions {
   }
+  &__team {
+  }
+  &__contact {
+  }
 }
 //preview block
 .preview-screen {
@@ -653,4 +657,344 @@
       border: 1px solid #97d5ae;
     }
   }
+}
+
+//team
+
+.team {
+  &__container {
+    position: relative;
+    top: 56%;
+    left: 0;
+    z-index: 2;
+    transform: translate(0px, -50%);
+
+    @media screen and (max-height: 680px) {
+      top: calc(50% + 44px);
+    }
+  }
+
+  &__title {
+    font-family: MontserratAlternates;
+    font-weight: 500;
+    font-size: 54px;
+    line-height: 60px;
+    color: #1f1b20;
+
+    @media (max-width: $md-4), (max-height: 800px) {
+      font-size: 38px;
+    }
+    @media (max-width: $md-3), (max-height: 600px) {
+      font-size: 28px;
+    }
+    @media (max-width: $md-2), (max-height: 600px) {
+      font-size: 20px;
+      line-height: 110%;
+    }
+  }
+
+  &__slider {
+    max-width: 890px;
+    margin: 40px auto 0 auto;
+
+    &.swiper {
+      overflow: visible;
+    }
+
+    @media (max-width: $md-4), (max-height: 800px) {
+      margin: 20px auto 0 auto;
+    }
+    @media (max-width: $md-3), (max-height: 600px) {
+      margin: 10px auto 0 auto;
+      max-width: 500px;
+    }
+    @media (max-width: $md-2) {
+      max-width: 200px;
+    }
+  }
+
+  &__slider-inner {
+  }
+
+  &__slide {
+  }
+
+  &__image-inner {
+    padding: 4px;
+    border: 2px solid #42af6c;
+    border-radius: 14px;
+  }
+
+  &__image {
+    padding-bottom: 170%;
+    border-radius: 10px;
+
+    @media (max-width: $md-4), (max-height: 800px) {
+      padding-bottom: 100%;
+      background-position: center top;
+    }
+    @media (max-width: $md-3), (max-height: 600px) {
+      padding-bottom: 96%;
+    }
+    @media (max-width: $md-2) {
+      padding-bottom: 120%;
+    }
+  }
+
+  &__name {
+    margin-top: 12px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 128%;
+    color: #333942;
+    @media (max-width: $md-3), (max-height: 600px) {
+      font-size: 14px;
+      margin-top: 8px;
+    }
+  }
+
+  &__profession {
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 150%;
+
+    letter-spacing: 0.015em;
+
+    color: #a3a3a3;
+    @media (max-width: $md-3), (max-height: 600px) {
+      font-size: 13px;
+      margin-top: 4px;
+    }
+  }
+}
+
+//contact
+
+.contact {
+  &__container {
+    position: relative;
+    top: 50%;
+    left: 0;
+    z-index: 2;
+    transform: translate(0px, -50%);
+
+    @media screen and (max-height: 680px) {
+      top: calc(50% + 44px);
+    }
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__content {
+    position: relative;
+    margin-right: 20px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 200vw;
+      height: calc(100% + 160px);
+      transform: translate(-50%, -50%);
+      background: #f7f7f7;
+      z-index: -1;
+
+      @media screen and (max-width: $md-3), (max-height: 480px) {
+        display: none;
+      }
+    }
+    @media screen and (max-width: $md-2) {
+      margin-right: 0px;
+    }
+  }
+
+  &__title {
+    font-family: MontserratAlternates;
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 122%;
+    color: #1f1b20;
+    max-width: 624px;
+
+    @media (max-width: $md-4), (max-height: 800px) {
+      font-size: 30px;
+    }
+    @media (max-width: $md-3), (max-height: 480px) {
+      font-size: 24px;
+      text-align: center;
+    }
+    @media (max-width: $md-2), (max-height: 420px) {
+      font-size: 20px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+
+  &__text {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 200%;
+    letter-spacing: 0.02em;
+    color: #7d7d7d;
+    @media (max-width: $md-4), (max-height: 800px) {
+      font-size: 14px;
+      margin-top: 4px;
+    }
+    @media (max-width: $md-3), (max-height: 480px) {
+      display: none;
+    }
+  }
+
+  &__form {
+    margin-top: 30px;
+    max-width: 430px;
+    @media (max-width: $md-4), (max-height: 800px) {
+      margin-top: 10px;
+    }
+    @media (max-width: $md-3), (max-height: 480px) {
+      margin: 20px auto 0px auto;
+    }
+  }
+
+  &__name-input {
+    width: 100%;
+  }
+
+  &__phone-input {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  &__button-send {
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 4px;
+    background-color: $color-green;
+    padding: 14px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 120%;
+    color: #f2f2f2;
+    text-align: center;
+
+    @media screen and (min-width: $md-2) {
+      transition: background-color 0.3s ease 0s;
+      &:hover {
+        background-color: $color-green-sub;
+      }
+    }
+
+    @media (max-width: $md-4), (max-height: 800px) {
+      margin-top: 10px;
+    }
+    @media (max-width: $md-2), (max-height: 420px) {
+      font-size: 14px;
+    }
+  }
+
+  &__policy {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__policy-checkbox {
+    margin-right: 12px;
+
+    width: 20px;
+    height: 20px;
+
+    opacity: 0;
+
+    & + .contact__data-inner label {
+      user-select: none;
+    }
+    & + .contact__data-inner label::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -32px;
+      width: 20px;
+      height: 20px;
+
+      border: 1px solid #a6a6a6;
+      border-radius: 2px;
+    }
+    &:checked + .contact__data-inner label::before {
+      background: url('../../img/icons/ok-icon.svg') center no-repeat;
+    }
+    &:not(:disabled):not(:checked) + .contact__data-inner label:hover::before {
+      border: 1px solid #42af6c;
+    }
+  }
+
+  &__data-inner {
+    font-size: 12px;
+    line-height: 150%;
+    letter-spacing: 0.015em;
+    color: #7d7d7d;
+    display: flex;
+    @media (max-width: 420px) {
+      flex-flow: column nowrap;
+      align-items: flex-start;
+    }
+  }
+
+  &__data-label {
+    cursor: pointer;
+    position: relative;
+    margin-right: 4px;
+  }
+
+  &__data-link {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  &__decor-image {
+    position: absolute;
+    top: 20px;
+    left: 350px;
+    z-index: -1;
+
+    @media (max-width: $md-4), (max-height: 800px) {
+      width: 300px;
+    }
+    @media (max-width: $md-3), (max-height: 480px) {
+      top: -40px;
+      left: 300px;
+    }
+    @media (max-width: $md-2), (max-height: 420px) {
+      top: 0px;
+      left: 200px;
+      width: 200px;
+    }
+  }
+
+  &__image {
+    padding-bottom: 50%;
+    flex: 0 1 500px;
+    @media (max-width: $md-4), (max-height: 800px) {
+      padding-bottom: 40%;
+    }
+    @media screen and (max-height: 640px) {
+      padding-bottom: 26%;
+    }
+    @media screen and (max-width: $md-3), (max-height: 480px) {
+      display: none;
+    }
+  }
+}
+
+.input-contact {
+  padding: 14px 14px;
+  line-height: 150%;
+  letter-spacing: 0.015em;
+  background-color: $color-white;
+  border: 1px solid rgba(0, 0, 0, 0.24);
+  border-radius: 4px;
 }

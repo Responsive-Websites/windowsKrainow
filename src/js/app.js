@@ -5,11 +5,14 @@
 
 //mask phone number
 let phone_number = document.querySelector('.preview-screen__input');
+let phone_form_number = document.querySelector('.contact__phone-input');
 let maskOptions = {
   mask: '+{7}(000)000 0000',
   lazy: false,
 };
-let mask = IMask(phone_number, maskOptions);
+
+IMask(phone_form_number, maskOptions);
+IMask(phone_number, maskOptions);
 
 // burger
 
@@ -668,6 +671,27 @@ const benefitsSlider = new Swiper('.benefits__slider', {
     1200: {
       spaceBetween: 30,
       slidesPerView: '4',
+    },
+  },
+});
+
+const teamSlider = new Swiper('.team__slider', {
+  speed: 1800,
+
+  initialSlide: 2,
+
+  breakpoints: {
+    320: {
+      slidesPerView: '1',
+      spaceBetween: 10,
+    },
+    481: {
+      slidesPerView: '2',
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: '3',
+      spaceBetween: 20,
     },
   },
 });
