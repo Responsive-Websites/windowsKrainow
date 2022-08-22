@@ -1143,3 +1143,260 @@
     }
   }
 }
+
+//footer block (last block)
+
+.footer {
+  &__inner {
+    position: relative;
+    top: calc(50% + 44px);
+    left: 0;
+    z-index: 2;
+    transform: translate(0px, -50%);
+  }
+  &__container {
+  }
+
+  &__content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: $md-2) {
+      display: block;
+    }
+  }
+  &__content {
+    margin-right: 20px;
+    @media screen and (max-width: $md-2) {
+      margin-right: 0px;
+    }
+  }
+
+  &__number {
+    display: block;
+    font-size: 51px;
+    line-height: 121%;
+    letter-spacing: 0.05em;
+    color: $color-white;
+    @media (max-width: $md-4), (max-height: 800px) {
+      font-size: 40px;
+    }
+    @media (max-width: $md-3), (max-height: 550px) {
+      font-size: 28px;
+    }
+    @media screen and (max-width: $md-2) {
+      text-align: center;
+    }
+  }
+
+  &__email {
+    display: block;
+    margin-top: 40px;
+    font-size: 24px;
+    line-height: 120%;
+    color: #dedede;
+    @media (max-width: $md-4), (max-height: 800px) {
+      margin-top: 10px;
+    }
+    @media (max-width: $md-3), (max-height: 550px) {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+    @media screen and (max-width: $md-2) {
+      text-align: center;
+    }
+  }
+
+  &__address {
+    display: block;
+    margin-top: 18px;
+    font-size: 16px;
+    line-height: 120%;
+    color: #dedede;
+    @media (max-width: $md-3), (max-height: 550px) {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    @media screen and (max-width: $md-2) {
+      text-align: center;
+    }
+  }
+
+  &__social {
+    margin-top: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 52px -10px -10px -10px;
+    @media (max-width: $md-4), (max-height: 800px) {
+      margin-top: 30px;
+    }
+    @media (max-width: $md-3), (max-height: 550px) {
+      display: none;
+    }
+  }
+
+  &__social-icon {
+    margin: 0px 10px;
+    padding: 10px;
+
+    & path {
+      transition: all 0.3s ease 0s;
+    }
+    @media screen and (min-width: $md-2) {
+      &_youtube:hover {
+        & path {
+          fill: $color-green;
+        }
+      }
+      &_vk:hover {
+        & path {
+          fill: $color-green;
+          stroke: $color-green;
+        }
+      }
+      &_tg:hover {
+        & path {
+          fill: $color-green;
+        }
+      }
+      &_wp:hover {
+        & path {
+          fill: $color-green;
+          stroke: $color-green;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    flex: 0 1 344px;
+    @media (max-width: $md-4), (max-height: 800px) {
+      flex: 0 1 280px;
+    }
+    @media (max-width: $md-3), (max-height: 550px) {
+      flex: 0 1 220px;
+    }
+
+    @media screen and (max-width: $md-2) {
+      display: none;
+    }
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__info {
+    margin-top: 180px;
+    display: flex;
+    color: #cfcfcf;
+
+    @media (max-width: $md-4), (max-height: 800px) {
+      margin-top: 100px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    @media (max-width: $md-3), (max-height: 550px) {
+      margin-top: 50px;
+    }
+    @media screen and (max-width: $md-2) {
+      margin-top: 40px;
+      flex-flow: column nowrap;
+      align-items: center;
+    }
+  }
+
+  &__copy {
+    display: block;
+    flex: 0 1 calc(33.333% - 10px);
+    margin-right: 10px;
+
+    @media screen and (max-width: $md-4) {
+      flex: 0 1 auto;
+      margin: 0px 10px 0px 0px;
+    }
+    @media screen and (max-width: $md-3) {
+      margin: 10px 10px 10px 0px;
+    }
+    @media screen and (max-width: $md-2) {
+      margin: 10px 0px;
+    }
+  }
+
+  &__politic {
+    display: block;
+    flex: 0 1 calc(33.333% - 20px);
+    text-align: center;
+    color: inherit;
+    transition: color 0.3s ease 0s;
+    text-decoration: underline;
+    @media screen and (min-width: $md-2) {
+      &:hover {
+        color: $color-green;
+      }
+    }
+    margin: 0px 10px;
+
+    @media screen and (max-width: $md-4) {
+      flex: 0 1 auto;
+      margin: 0px 10px 0px 0px;
+    }
+
+    @media screen and (max-width: $md-3) {
+      margin: 10px 10px 10px 0px;
+    }
+    @media screen and (max-width: $md-2) {
+      margin: 10px 0px;
+    }
+  }
+
+  &__support {
+    flex: 0 1 calc(33.333% - 10px);
+    text-align: right;
+
+    & a {
+      color: inherit;
+      text-decoration: underline;
+      transition: color 0.3s ease 0s;
+
+      @media screen and (min-width: $md-2) {
+        &:hover {
+          color: $color-green;
+        }
+      }
+    }
+    margin-left: 10px;
+
+    @media screen and (max-width: $md-4) {
+      flex: 0 1 auto;
+      margin: 0px 0px 0px 0px;
+    }
+    @media screen and (max-width: $md-3) {
+      margin: 10px 0px 10px 0px;
+    }
+    @media screen and (max-width: $md-2) {
+      margin: 10px 0px;
+    }
+  }
+
+  &__background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    background-color: rgba(6, 94, 32, 0.329);
+    & img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      filter: brightness(30%);
+    }
+  }
+}
