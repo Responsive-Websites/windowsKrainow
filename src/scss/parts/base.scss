@@ -27,6 +27,17 @@ main {
   flex: 1 1 auto;
 }
 
+.pagination {
+  position: absolute;
+
+  right: 0px;
+  left: auto !important;
+  background-color: transparent !important;
+  .swiper-pagination-progressbar-fill {
+    background-color: $color-green !important;
+  }
+}
+
 ._ibg {
   background-position: center;
   background-size: cover;

@@ -152,6 +152,16 @@ main {
   flex: 1 1 auto;
 }
 
+.pagination {
+  position: absolute;
+  right: 0px;
+  left: auto !important;
+  background-color: transparent !important;
+}
+.pagination .swiper-pagination-progressbar-fill {
+  background-color: #42af6c !important;
+}
+
 ._ibg {
   background-position: center;
   background-size: cover;
@@ -185,7 +195,7 @@ main {
   position: absolute;
   width: 100%;
   height: 139%;
-  background: linear-gradient(180deg, rgba(31, 27, 32, 0.91) 0%, rgba(31, 27, 32, 0) 100%);
+  background: linear-gradient(to bottom, hsl(0deg, 0%, 9%) 0%, hsla(0deg, 0%, 9%, 0.987) 8.1%, hsla(0deg, 0%, 9%, 0.951) 15.5%, hsla(0deg, 0%, 9%, 0.896) 22.5%, hsla(0deg, 0%, 9%, 0.825) 29%, hsla(0deg, 0%, 9%, 0.741) 35.3%, hsla(0deg, 0%, 9%, 0.648) 41.2%, hsla(0deg, 0%, 9%, 0.55) 47.1%, hsla(0deg, 0%, 9%, 0.45) 52.9%, hsla(0deg, 0%, 9%, 0.352) 58.8%, hsla(0deg, 0%, 9%, 0.259) 64.7%, hsla(0deg, 0%, 9%, 0.175) 71%, hsla(0deg, 0%, 9%, 0.104) 77.5%, hsla(0deg, 0%, 9%, 0.049) 84.5%, hsla(0deg, 0%, 9%, 0.013) 91.9%, hsla(0deg, 0%, 9%, 0) 100%);
   top: 0;
   left: 0;
   z-index: -1;
@@ -383,6 +393,7 @@ main {
 .screen {
   flex: 1 0 100%;
   position: relative;
+  min-height: 460px;
   overflow: hidden;
 }
 
@@ -618,7 +629,7 @@ main {
   left: 0;
   overflow: hidden;
   pointer-events: none;
-  background-color: rgba(6, 94, 32, 0.329);
+  background-color: rgba(8, 8, 8, 0.644);
 }
 .preview-screen__video video {
   position: absolute;
@@ -1169,6 +1180,9 @@ main {
   }
 }
 
+.contact {
+  overflow: hidden;
+}
 .contact__container {
   position: relative;
   top: 50%;

@@ -4,6 +4,7 @@
 // 'use strict';
 
 //mask phone number
+let wrapper = document.querySelector('.wrapper');
 let phone_number = document.querySelector('.preview-screen__input');
 let phone_form_number = document.querySelector('.contact__phone-input');
 let maskOptions = {
@@ -637,6 +638,19 @@ const pageSlider = new Swiper('.main', {
   observer: true,
   observeParents: true,
   observeSlideChildren: true,
+
+  pagination: {
+    el: '.pagination',
+    type: 'progressbar',
+  },
+});
+
+window.addEventListener('resize', () => {
+  if (window.innerHeight <= 460) {
+    pageSlider.params.freeMode.enabled = true;
+  } else {
+    pageSlider.params.freeMode.enabled = false;
+  }
 });
 
 const benefitsSlider = new Swiper('.benefits__slider', {
